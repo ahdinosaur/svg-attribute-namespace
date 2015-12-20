@@ -25,6 +25,12 @@ var svgAttributeNS = require('svg-attribute-namespace')
 
 function setAttribute (node, name, value) {
   var namespace = svgAttributeNs(name)
-  node.setAttributeNS(namespace, name, value)
+
+  if (namespace === undefined) {
+    // not an svg attribute
+    node.setAttribute(name, value)
+  } else {
+    node.setAttributeNS(namespace, name, value)
+  }
 }
 ```

@@ -3,7 +3,7 @@
 module.exports = module.exports['default'] = SvgAttributeNamespace
 
 /*
- * Supported XML attribute namespaces by prefix.
+ * Supported SVG attribute namespaces by prefix.
  *
  * References:
  * - http://www.w3.org/TR/SVGTiny12/attributeTable.html
@@ -24,8 +24,20 @@ var namespaces = module.exports.namespaces = {
  * @param {String} attributeName
  * @return {String} namespace
  */
+
 function SvgAttributeNamespace (attributeName) {
+  // if no prefix separator in attributeName, then no namespace
   if (attributeName.indexOf(':') === -1) return null
+
+  // get prefix from attributeName
   var prefix = attributeName.split(':', 1)[0]
-  return namespaces[prefix]
+
+  // if prefix in supported prefixes
+  if (namespaces.hasOwnProperty(prefix)) {
+    // then namespace of prefix
+    return namespaces[prefix]
+  } else {
+    // else unsupported prefix
+    throw new Error('svg-attribute-namespace: prefix "' + prefix + '" is not supported by SVG.')
+  }
 }

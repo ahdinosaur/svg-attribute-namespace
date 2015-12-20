@@ -9,9 +9,9 @@ test('require module', function (t) {
 
 test('non-svg attributes', function (t) {
   t.equal(svgAttributeNS('href'), null)
-  t.equal(svgAttributeNS('yeah:nah'), undefined)
-  // ^ this would throw an DOMException NAMESPACE_ERR,
-  // so should we be throwing an error as well?
+  t.throws(function () {
+    svgAttributeNS('yeah:nah')
+  }, /prefix "yeah" is not supported by SVG\.$/)
   t.end()
 })
 

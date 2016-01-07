@@ -4,7 +4,7 @@ get namespace of svg attribute
 
 code copied from (`virtual-hyperscript/svg-attribute-namespace`](https://raw.githubusercontent.com/Matt-Esch/virtual-dom/master/virtual-hyperscript/svg-attribute-namespace.js), .
 
-## install
+## Install
 
 with [`npm`](https://www.npmjs.com), run
 
@@ -12,13 +12,13 @@ with [`npm`](https://www.npmjs.com), run
 npm install --save svg-attribute-namespace
 ```
 
-## usage
+## Usage
 
 ### `var svgAttributeNamespace = require('svg-attribute-namespace')`
 
 ### `svgAttributeNamespace(attributeName) -> namespace`
 
-## example
+## Example
 
 ```
 var svgAttributeNS = require('svg-attribute-namespace')

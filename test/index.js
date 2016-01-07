@@ -1,8 +1,15 @@
-var test = require('tape')
+/**
+ * Imports
+ */
 
-var svgAttributeNS
+var test = require('tape')
+var svgAttributeNS = require('..')
+
+/**
+ * Tests
+ */
+
 test('require module', function (t) {
-  svgAttributeNS = require('./')
   t.equal(typeof svgAttributeNS, 'function')
   t.end()
 })

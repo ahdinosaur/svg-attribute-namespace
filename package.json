@@ -1,10 +1,10 @@
 {
-  "name": "svg-attribute-namespace",
+  "name": "@f/svg-attribute-namespace",
   "version": "2.1.0",
   "description": "get namespace of svg attribute",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
   "devDependencies": {
     "standard": "^5.4.1",
     "tape": "^4.2.2"
+  },
+  "dependencies": {
+    "@f/svg-attribute-namespaces": "^1.0.1"
   }
 }

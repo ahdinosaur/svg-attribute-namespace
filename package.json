@@ -1,6 +1,6 @@
 {
   "name": "@f/svg-attribute-namespace",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "get namespace of svg attribute",
   "main": "lib/index.js",
   "scripts": {
